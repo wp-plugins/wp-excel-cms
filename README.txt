@@ -4,7 +4,7 @@ Donate link: http://webteilchen.de
 Tags: excel, import, wp excel cms, xls, xlsx, json
 Requires at least: 3.5.1
 Tested up to: 3.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,10 @@ I hope you enjoy this plugin. Give me feedback to improve it.
 
 = 1.0 =
 * Inital Version
+
+= 1.0.1 =
+* Fix: Upload Folder will be created automatically
+
 
 == Donations ==
 

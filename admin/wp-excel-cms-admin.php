@@ -186,8 +186,11 @@ function create_excel_file($file_name){
     #$file_name = $this->upload_dir['path']."/test.json";
     #$file_name = $uploaded_file_path_name.'.json';
     
-    $this->upload_dir     = $this->upload_dir['basedir'].'/wp-excel-cms';
-    $file_name      = $this->upload_dir.'/'.$new_file_name.'.json';
+    $this->upload_dir    = $this->upload_dir['basedir'].'/wp-excel-cms';
+    $file_name           = $this->upload_dir.'/'.$new_file_name.'.json';
+    
+
+    
     
     $fp = fopen($file_name,"wb");
     fwrite($fp, $jsonData);
@@ -247,8 +250,6 @@ function getFileList(){
     $this->upload_dir         = wp_upload_dir();    
     $this->upload_dir         = $this->upload_dir['basedir'].'/wp-excel-cms';
 
-    
-    
     if(!is_array($del_files)){
         return false;
     }
@@ -405,6 +406,15 @@ function getFileList(){
         $this->upload_base_url    = $this->upload_dir['baseurl'].'/wp-excel-cms';
         $this->upload_dir         = $this->upload_dir['basedir'].'/wp-excel-cms';
         $this->admin_plugin_url   = admin_url( "options-general.php?page=".$_GET["page"] );
+       
+       
+        if(!is_dir($this->upload_dir)){
+            $createUploadFolderStarted  = true;
+            $createUploadFolderRes      = mkdir($this->upload_dir);
+        }
+        if(!is_dir($this->upload_dir)){
+            $uploadFolderDoesNotExists = true;
+        }
        
         
         if($_POST['action2']=='delete'){

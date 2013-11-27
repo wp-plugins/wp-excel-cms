@@ -13,7 +13,22 @@
  */
 ?>
 
+<?php if (isset($createUploadFolderStarted)) { ?>
+    
+    <?php if($createUploadFolderRes){ ?>
+        <div id="message" class="updated fade"><p>Upload folder "wp-content/uploads/wp-excel-cms" successfully created. </p></div>
+    <?php }else{ ?>
+        
+    <?php }?>
 
+<?php } ?>
+
+
+<?php if (isset($uploadFolderDoesNotExists)) { ?>
+    
+<div id="message" class="error fade"><p>Can't create upload folder "wp-content/uploads/wp-excel-cms". Please create it manually and make it writable. </p></div>
+
+<?php } ?>
 
 
 <?php if(isset($deleteStarted)){ ?>
@@ -37,6 +52,8 @@
     <?php }?>
 
 <?php } ?>
+
+
 
 
 
