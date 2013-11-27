@@ -9,13 +9,24 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Simple Plugin to import Excel Files to Wordpress and use the Data in your theme. Just install and ready to use.+
-No Database entries are created. All file & json based. You can use as many excel files in one page as you want.
+No Database entries are created.
 
 
 == Description ==
 
 Simple Plugin to import Excel Files to Wordpress and use the Data in your theme. Just install and ready to use.+
 No Database entries are created. All file & json based. You can use as many excel files in one page as you want.
+
+For example, if you have a guestlist in excel and you want to show it in a special style on your website, you can easily upload the excel file in your admin interface an then use `wp_excel_cms_get("guestlist");` to get the structured data in your template.
+
+*Example Usage:*
+`
+$data = wp_excel_cms_get("guestlist");
+foreach($guestlist as $guest){
+  print_r($guest);             
+}
+`    
+I hope you enjoy this plugin. Give me feedback to improve it.
 
 
 == Installation ==
@@ -57,6 +68,6 @@ No Database entries are created. All file & json based. You can use as many exce
 = 1.0 =
 * Inital Version
 
-
+== Donations ==
 
 
