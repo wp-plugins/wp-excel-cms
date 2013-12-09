@@ -14,16 +14,23 @@ No Database entries are created.
 
 == Description ==
 
-Simple Plugin to import Excel files to Wordpress and use the Data in your theme. No Database entries are created. All file & json based. You can use as many excel files in one page as you want.
+Simple plugin to import excel files to Wordpress and use the data in your theme. No database entries are created. All file & json based. You can use as many excel files on one page as you want.
 
 For example, if you have a guestlist in excel and you want to show it in a special style on your website, you can easily upload the excel file in your admin interface an then use `wp_excel_cms_get("guestlist");` to get the structured data in your template.
 
+The string "guestlist" have to be replaced by your given excel file name.
+
+
 *Example Usage:*
 `
-$data = wp_excel_cms_get("guestlist");
-foreach($guestlist as $guest){
-  print_r($guest);             
-}
+<?php $data = wp_excel_cms_get("guestlist"); ?>
+
+<?php foreach($data as $entry): ?>
+column 1: <?php echo $entry[0]; ?><br />
+column 2: <?php echo $entry[1]; ?><br />
+column 3: <?php echo $entry[2]; ?><br />
+<hr />
+<?php endforeach; ?>
 `    
 I hope you enjoy this plugin. Give me feedback to improve it.
 
