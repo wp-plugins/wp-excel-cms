@@ -20,7 +20,6 @@ function wp_excel_cms_get($name){
 function wp_excel_cms_shortcode( $atts ) {
 	extract( shortcode_atts( array(
 		'name' => '',
-		'bar' => 'something else',
         'template' => 'default',
 	), $atts ) );
 
