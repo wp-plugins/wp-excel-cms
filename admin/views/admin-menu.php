@@ -101,11 +101,11 @@ $j(document).ready(function() {
                                 <table class="form-table" style="width:500px">
                                     <tr>
                                         <td>Name:</td>
-                                        <td><input type="text" name="file_name"/> </td>
+                                        <td><input type="text" name="file_name" placeholder="Give it a name (required)"/> </td>
                                     </tr>
                                     <tr>
                                         <td>File:</td>
-                                        <td><input type="file" name="file"  style="width:400px"   /></td>
+                                        <td><input type="file" name="file"  style="width:400px"   />Only *.xlsx Filetypes are supported</td>
                                     </tr>    
                                     <tr>
                                         <td>Upload:</td>
